@@ -1,0 +1,88 @@
+﻿@model DejotaTur.Models.Cliente
+
+@{
+    ViewData["Title"] = "Detalhes ▪";
+}
+
+<section class="container-fluid cadsection">
+    <div class="container">
+        <h2>Detalhes</h2>
+
+<div>
+    <h4>Viajante</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AnoNascimento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AnoNascimento)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Endereço)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Endereço)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ID"><i class="bi bi-pencil-square"></i></a> |
+    <a asp-action="Index">Voltar</a>
+</div>
+</div>
+</section>
+
+<footer class="container-fluid footer1">
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-lg-4">
+              <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" asp-area="" asp-controller="Home" asp-action="Index">
+                <img src="~/Img/DejotaTur Logo.svg" alt="" width="50%">
+              </a>
+              <ul class="list-unstyled small text-muted">
+                <li>
+                  © 2021 DejotaTur LTDA. Todos os direitos reservados.
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-4" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a  asp-area="" asp-controller="Destinos" asp-action="Index">Home</a></li>
+                <li class="breadcrumb-item"><a  asp-area="" asp-controller="Destinos" asp-action="Index">Destinos</a></li>
+                <li class="breadcrumb-item"><a  asp-area="" asp-controller="Home" asp-action="Promoções">Promoções</a></li>
+                <li class="breadcrumb-item"><a  asp-area="" asp-controller="Home" asp-action="Contato">Contato</a></li>
+              </ol>
+            </div>
+            <div class="col-lg-4 row text-end">
+              <a href="#" class="col-2 link-secondary socialmedia"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="col-2 link-secondary socialmedia"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="col-2 link-secondary socialmedia"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+</footer>

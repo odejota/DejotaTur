@@ -1,0 +1,92 @@
+﻿@model DejotaTur.Models.Cliente
+
+@{
+    ViewData["Title"] = "Editar ▪";
+}
+
+<section class="container-fluid cadsection">
+    <div class="container">
+        <h2>Editar cadastro</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label">Nome completo</label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AnoNascimento" class="control-label">Ano de nascimento</label>
+                <input asp-for="AnoNascimento" class="form-control" />
+                <span asp-validation-for="AnoNascimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CPF" class="control-label">CPF (apenas números)</label>
+                <input asp-for="CPF" class="form-control" />
+                <span asp-validation-for="CPF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">E-mail</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefone" class="control-label"></label>
+                <input asp-for="Telefone" class="form-control" />
+                <span asp-validation-for="Telefone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Endereço" class="control-label"></label>
+                <input asp-for="Endereço" class="form-control" />
+                <span asp-validation-for="Endereço" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btncolor mt-2" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+</div>
+</section>
+
+
+<footer class="container-fluid footer1">
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-lg-4">
+              <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" asp-area="" asp-controller="Home" asp-action="Index">
+                <img src="~/Img/DejotaTur Logo.svg" alt="" width="50%">
+              </a>
+              <ul class="list-unstyled small text-muted">
+                <li>
+                  © 2021 DejotaTur LTDA. Todos os direitos reservados.
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-4" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a  asp-area="" asp-controller="Destinos" asp-action="Index">Home</a></li>
+                <li class="breadcrumb-item"><a  asp-area="" asp-controller="Destinos" asp-action="Index">Destinos</a></li>
+                <li class="breadcrumb-item"><a  asp-area="" asp-controller="Home" asp-action="Promoções">Promoções</a></li>
+                <li class="breadcrumb-item"><a  asp-area="" asp-controller="Home" asp-action="Contato">Contato</a></li>
+              </ol>
+            </div>
+            <div class="col-lg-4 row text-end">
+              <a href="#" class="col-2 link-secondary socialmedia"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="col-2 link-secondary socialmedia"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="col-2 link-secondary socialmedia"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+</footer>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

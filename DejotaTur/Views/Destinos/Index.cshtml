@@ -1,0 +1,63 @@
+﻿@model IEnumerable<DejotaTur.Models.Destinos>
+
+@{
+    ViewData["Title"] = "Destinos ▪";
+}
+
+<section class="container-fluid destsection">
+    <div class="container">
+        <h2>Destinos</h2>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Cidade/Região</th>
+                    <th>País</th>
+                    <th>Continente</th>
+                    <th>Aeroportos próximos (Código IATA)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Destinos destinos in Model)
+                {
+                    <tr>
+                        <td>@destinos.Cidade</td>
+                        <td>@destinos.País</td>
+                        <td>@destinos.Continente</td>
+                        <td>@destinos.Aeroportos_IATA</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<footer class="container-fluid footer1">
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-lg-4">
+              <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" asp-area="" asp-controller="Home" asp-action="Index">
+                <img src="~/Img/DejotaTur Logo.svg" alt="" width="50%">
+              </a>
+              <ul class="list-unstyled small text-muted">
+                <li>
+                  © 2021 DejotaTur LTDA. Todos os direitos reservados.
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-4" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page"><a  asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Destinos</li>
+                <li class="breadcrumb-item"><a  asp-area="" asp-controller="Home" asp-action="Promoções">Promoções</a></li>
+                <li class="breadcrumb-item"><a  asp-area="" asp-controller="Home" asp-action="Contato">Contato</a></li>
+              </ol>
+            </div>
+            <div class="col-lg-4 row text-end">
+              <a href="#" class="col-2 link-secondary socialmedia"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="col-2 link-secondary socialmedia"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="col-2 link-secondary socialmedia"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+  </footer>

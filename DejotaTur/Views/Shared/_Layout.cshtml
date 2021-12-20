@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] DejotaTur ▪ Programar. Viajar.</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="~/css/dejotatur.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <link rel="shortcut icon" href="~/Img/DejotaTur Logo icon.svg">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark">
+    <div class="container-fluid border-bottom py-3">
+      <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                <img src="~/Img/DejotaTur Logo.svg" alt="" width="50%"></a>
+      <button class="navbar-toggler collapsed justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" wfd-invisible="true">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarCollapse" style="">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" asp-area="" asp-controller="Destinos" asp-action="Index">Destinos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Promoções">Promoções</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Contato">Contato</a>
+          </li>
+        </ul>
+        <div>
+           <button type="button" class="btn btn-sm btn-outline-light">Login</button>
+           <a asp-area="" asp-controller="Clientes" asp-action="Index"><button type="button" class="btn btn-sm btncolor">Cadastrar</button></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+        <br><br>
+        
+        <div class="container" id="headdiv">
+            <h2>Santorini</h2>
+            <p>Há certos lugares que combinam beleza natural e charme arquitetônico em doses tão precisas <br>e surpreendentes que é difícil acreditar que realmente existam. <br>Santorini, a mais célebre das ilhas gregas, é assim.</p>
+            <h6>Saiba mais e programe sua viagem <a href="#"><i class="bi bi-arrow-right-square-fill"></i></a></h6>
+        </div>
+  </header>
+    <div>
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+  
+  <div class="container-fluid text-center footer2">
+    <p class=" mt-3">Desenvolvido por Danilo "Dejota" José dos Santos</p>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

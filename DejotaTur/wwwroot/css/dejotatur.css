@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,300&display=swap');*/
+
+/*body{
+    font-family: 'Montserrat', sans-serif;
+}*/
+
+header {
+    background: url(../Img/santorini-orlando-brooke-unsplash-nav.jpg) no-repeat;
+    height: 70vh;
+    background-size: contain;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    box-shadow: 0px 4px 15px 5px rgba(0, 0, 0, 0.11);
+}
+
+nav{
+    text-decoration: none;
+    color: #F2F2F2;
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.678), rgba(0, 0, 0, 0)); */
+}
+
+nav li a:hover{
+    color: #03BFB5 !important;
+    text-shadow: rgba(0, 0, 0, 0.719) !important;
+}
+
+.navbar-nav{
+    flex-direction: initial !important;
+}
+
+nav li a{
+    margin-right: 10px;
+}
+
+.btncolor {
+    background-color: #03BFB5;
+    color: #F2F2F2;
+}
+#headdiv{
+    color: #F2F2F2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.63);
+}
+
+.bi-arrow-right-square-fill{
+    color: #03BFB5;
+    /* text-decoration: none !important; */
+}
+
+header div h2{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+}
+
+.section1{
+    background-color: #F2F2F2;
+    box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.11);
+    padding-bottom: 5vh;
+    position: relative;
+    display: flex !important;
+    justify-content: center !important;
+    /* justify-items: center; */
+    align-self: center !important;
+}
+
+.section1 h2{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    padding-top: 5vh;
+    text-align: center;
+}
+
+.section1 a{
+    /* align-content: center; */
+    /* align-items: center; */
+    align-self: center;
+    justify-content: center;
+    /* justify-items: center; */
+    /* justify-self: center; */
+    display: flex;
+}
+
+.txtriscado{
+    text-decoration: line-through;
+}
+
+.promo{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    color: #03BFB5;
+}
+
+.divCards{
+    margin: 5px;
+    box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.062);
+}
+
+.footer1 {
+    background-color: #B3B3B3;
+    text-decoration: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-self: center !important;
+    justify-items: center;
+    text-align: center;
+}
+
+.btnpromos{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+}
+
+.footer2{
+    background-color: #F2F2F2;
+    box-shadow: 0px -4px 15px 7px rgba(0, 0, 0, 0.11);
+    text-align: center;
+    position: absolute !important;
+}
+
+.socialmedia{
+    font-size: larger;
+}
+
+.destsection {
+    box-shadow: 0px 4px 15px 7px rgba(0, 0, 0, 0.11);
+    padding-bottom: 5vh;
+    position: relative;
+    display: flex !important;
+    justify-content: center !important;
+    align-self: center !important;
+}
+
+.destsection h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    padding-top: 5vh;
+    text-align: center;
+}
+
+.contatosection {
+    box-shadow: 0px 4px 15px 7px rgba(0, 0, 0, 0.11);
+    padding-bottom: 5vh;
+    position: relative;
+    display: flex !important;
+    justify-content: center !important;
+    align-self: center !important;
+    justify-items: center;
+    text-align: center;
+}
+
+.contatosection h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    padding-top: 5vh;
+    text-align: center;
+}
+
+.contatosection h4 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    padding-top: 5vh;
+    text-align: center;
+}
+
+.cadsection {
+    box-shadow: 0px 4px 15px 7px rgba(0, 0, 0, 0.11);
+    padding-bottom: 5vh;
+    position: relative;
+    display: flex !important;
+    justify-content: center !important;
+    align-self: center !important;
+}
+
+.cadsection h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    padding-top: 5vh;
+    text-align: center;
+}
+
+.bi-pencil-square{
+    color: #03BFB5;
+}
+
+.bi-search{
+    color: black;
+}
+
+.bi-folder-x{
+    color: red;
+}

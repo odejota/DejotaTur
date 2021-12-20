@@ -1,0 +1,99 @@
+﻿@model IEnumerable<DejotaTur.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Cadastro ▪";
+}
+
+<section class="container-fluid cadsection">
+    <div class="container">
+        <h2>Seu cadastro</h2>
+
+@*<p>
+    <a  asp-controller="Home" asp-action="Promoções">Programar viagem</a>
+</p>*@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nome
+            </th>
+            <th>
+                Ano de nascimento
+            </th>
+            <th>
+                CPF
+            </th>
+            <th>
+                E-mail
+            </th>
+            <th>
+                Telefone
+            </th>
+            <th>
+                Endereço
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnoNascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Endereço)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID"><i class="bi bi-pencil-square"></i></a> |
+                <a asp-action="Details" asp-route-id="@item.ID"><i class="bi bi-search"></i></a> |
+                <a asp-action="Delete" asp-route-id="@item.ID"><i class="bi bi-folder-x"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>
+</section>
+
+<footer class="container-fluid footer1">
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-lg-4">
+              <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" asp-area="" asp-controller="Home" asp-action="Index">
+                <img src="~/Img/DejotaTur Logo.svg" alt="" width="50%">
+              </a>
+              <ul class="list-unstyled small text-muted">
+                <li>
+                  © 2021 DejotaTur LTDA. Todos os direitos reservados.
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-4" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a  asp-area="" asp-controller="Destinos" asp-action="Index">Home</a></li>
+                <li class="breadcrumb-item"><a  asp-area="" asp-controller="Destinos" asp-action="Index">Destinos</a></li>
+                <li class="breadcrumb-item"><a  asp-area="" asp-controller="Home" asp-action="Promoções">Promoções</a></li>
+                <li class="breadcrumb-item"><a  asp-area="" asp-controller="Home" asp-action="Contato">Contato</a></li>
+              </ol>
+            </div>
+            <div class="col-lg-4 row text-end">
+              <a href="#" class="col-2 link-secondary socialmedia"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="col-2 link-secondary socialmedia"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="col-2 link-secondary socialmedia"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+</footer>
